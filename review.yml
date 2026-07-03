@@ -1,0 +1,87 @@
+aid: papa
+name: Papa
+review:
+  question: Does Papa expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Papa publishes no public developer API of
+    any kind - REST, GraphQL, WebSocket, or SSE - so there is no server-push
+    transport on a Papa API to model. Papa's real-time behavior (a Papa Pal
+    surfacing risks and needs "in real time" during a visit) happens inside
+    Papa's own mobile apps and internal social-care-navigation systems, and the
+    signals are returned to health plans through reporting dashboards and
+    eligibility/data file exchange governed by a business contract, not through a
+    documented public messaging API.
+findings:
+  summary: |
+    Papa does not publish a documented public WebSocket API, and does not publish
+    a public or self-serve developer API of any kind. Papa is a companion care
+    company: it pairs older adults and families with vetted companions ("Papa
+    Pals") for social support, errands, transportation, technology help,
+    check-ins, and everyday assistance, and it sells this as a social care
+    benefit to Medicare Advantage, Medicaid, Special Needs, and commercial health
+    plans and to employers. The consumer and worker surfaces are the Papa Care
+    app (members request and schedule visits) and the Papa Pal app (workers
+    accept and complete visits). Integration with a health plan is an enterprise
+    B2B arrangement - eligibility file exchange to identify and onboard eligible
+    members, plus recurring reporting dashboards on utilization, gaps, referrals,
+    satisfaction, and outcomes. No public API reference, developer portal, API
+    keys, OpenAPI document, or WebSocket (ws:// or wss://) endpoint is documented
+    on papa.com or any Papa developer subdomain as of the review date.
+  openSource: |
+    Papa maintains a GitHub organization (github.com/joinpapa), but it contains
+    internal engineering artifacts (for example a candidate take-home and admin
+    or BI tooling), not a published API SDK or public API specification. There is
+    no open-source client for a Papa product API because no public Papa product
+    API exists.
+  accessModel: |
+    Access is gated and relationship-based. Members enroll by phone
+    (1-800-348-7951) or, for employer-sponsored members, online, and then use the
+    Papa Care app after eligibility is confirmed. Health plans and employers
+    engage Papa through a sales and contracting process (papa.com/health-plans),
+    after which data flows through eligibility files and reporting dashboards.
+    None of these paths is a public, documented, key-issued developer API.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference or developer portal is published for any Papa product.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere for Papa as of the review date.
+    - protocol: File Exchange
+      scheme: n/a
+      documented: false
+      note: Health plans share member eligibility files with Papa and receive reporting; a private, contract-governed data exchange, not a public API.
+  endpointsModeled: none
+  endpointsConfirmedRest: []
+sources:
+  - url: https://www.papa.com/health-plans
+    type: Website
+    note: Health plan offering - eligibility file analysis, member onboarding, and reporting dashboards. No API mentioned.
+  - url: https://www.papa.com/members
+    type: Website
+    note: Member benefits and enrollment via phone / Papa Care app. No developer surface.
+  - url: https://resources.papa.com/papa-for-health-plans
+    type: Website
+    note: Papa for Health Plans overview. Companion care outcomes and reporting; no API.
+  - url: https://github.com/joinpapa
+    type: SourceCode
+    note: Papa GitHub organization - internal engineering artifacts, no public product API SDK or spec.
+  - url: https://www.linkedin.com/company/papainc
+    type: LinkedIn
+    note: Company profile confirming the companion-care business model.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public API surface of any kind exists to catalog, so no OpenAPI or
+    AsyncAPI document was authored and no APIs are listed in apis.yml. The entry
+    is maintained as an honest stub documenting the company and its gated,
+    contract-based integration model (eligibility files and reporting), with the
+    company website, LinkedIn, GitHub organization, and health-plan sign-up as
+    common properties.

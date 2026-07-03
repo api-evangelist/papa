@@ -1,0 +1,43 @@
+aid: papa
+url: https://raw.githubusercontent.com/api-evangelist/papa/refs/heads/main/apis.yml
+name: Papa
+kind: company
+description: Papa is a companion care company that pairs older adults and families
+  with vetted, trained companions called Papa Pals for social support, errands,
+  transportation, technology help, check-ins, and everyday assistance. Papa sells
+  to Medicare Advantage, Medicaid, Special Needs, and commercial health plans and
+  to employers as a tech-enabled social care benefit, serving millions of members
+  across roughly 70-100 health plan and employer partners. Members are enrolled by
+  phone or, for employer members, online, and use the Papa Care app to request and
+  schedule visits; Papa Pals use the Papa Pal app to accept and complete visits.
+  Papa does not publish a public or self-serve developer API. Health plan
+  integration is handled through business agreements - eligibility file exchange to
+  identify and onboard eligible members, and recurring reporting dashboards covering
+  utilization, gaps, referrals, satisfaction, and outcomes - rather than through a
+  documented public REST API, developer portal, or API keys.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Social Care
+- Companion Care
+- Older Adults
+- Medicare Advantage
+- Medicaid
+- Health Plans
+- Aging
+- No Public API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://www.papa.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/papainc
+- type: GitHubOrganization
+  url: https://github.com/joinpapa
+- type: SignUp
+  url: https://www.papa.com/health-plans
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
