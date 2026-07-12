@@ -30,6 +30,12 @@ created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.19'
 common:
+- type: TrustCenter
+  url: security/papa-trust-center.yml
+- type: DomainSecurity
+  url: security/papa-domain-security.yml
+- url: https://www.papa.com/blog
+  type: Blog
 - type: Website
   url: https://www.papa.com
 - type: LinkedIn

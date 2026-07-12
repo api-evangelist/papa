@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://papa.securitypal.com/
+url: https://papa.securitypal.com/
+certifications:
+- SOC 2
+- HIPAA
+evidence:
+- source: https://papa.securitypal.com/
+  keywords:
+  - soc 2
+  - hipaa
+  - trust center
