@@ -15,6 +15,17 @@ description: Papa is a companion care company that pairs older adults and famili
   identify and onboard eligible members, and recurring reporting dashboards covering
   utilization, gaps, referrals, satisfaction, and outcomes - rather than through a
   documented public REST API, developer portal, or API keys.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
