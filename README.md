@@ -1,4 +1,4 @@
-# Papa (papa)
+# Papa
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,53 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Papa is a companion care company that pairs older adults and families with vetted, trained companions - called **Papa Pals** - for social support, errands, transportation, technology help, check-ins, and everyday assistance. Papa sells this as a tech-enabled social care benefit to Medicare Advantage, Medicaid, Special Needs, and commercial health plans and to employers, serving millions of members across roughly 70-100 health plan and employer partners. Members enroll by phone (or online for employer members) and use the **Papa Care** app to request and schedule visits; Papa Pals use the **Papa Pal** app to accept and complete them.
+Papa is a companion care company that pairs older adults and families with vetted, trained companions called Papa Pals for social support, errands, transportation, technology help, check-ins, and everyday assistance. Papa sells to Medicare Advantage, Medicaid, Special Needs, and commercial health plans and to employers as a tech-enabled social care benefit, serving millions of members across roughly 70-100 health plan and employer partners. Members are enrolled by phone or, for employer members, online, and use the Papa Care app to request and schedule visits; Papa Pals use the Papa Pal app to accept and complete visits. Papa does not publish a public or self-serve developer API. Health plan integration is handled through business agreements - eligibility file exchange to identify and onboard eligible members, and recurring reporting dashboards covering utilization, gaps, referrals, satisfaction, and outcomes - rather than through a documented public REST API, developer portal, or API keys.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/papa/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/papa/refs/heads/main/apis.yml)
+**Areas:** Healthcare · Social Care · Companion Care · Older Adults · Medicare Advantage · Medicaid · Health Plans · Aging
 
-## API Access Model — Honest Status
+## Papa on APIs.io
 
-**Papa does not publish a public or self-serve developer API.** There is no public API reference, developer portal, API-key signup, OpenAPI document, or WebSocket endpoint for any Papa product as of this writing.
+Everything profiled for Papa is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/papa/](https://apis.io/providers/papa/)** — or go straight to one of the APIs or properties below.
 
-Papa is a business-to-business-to-consumer (B2B2C) service company, not an API product company. A health plan or employer integrates with Papa through a **sales and contracting relationship**, and the resulting data movement is handled privately:
+### Published properties
 
-- **Eligibility file exchange** — the health plan shares member eligibility data so Papa can identify, target, and onboard eligible members. This is a contract-governed data-file exchange, not a documented public API.
-- **Enrollment and scheduling** — members are enrolled by phone (1-800-348-7951) or online (employer members), then use the Papa Care app. There is no public scheduling API.
-- **Reporting dashboards** — Papa returns recurring dashboards covering program activity, utilization, identified gaps and referrals, member satisfaction, and outcomes. This is delivered as reporting, not as a queryable public API.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Logical capability areas a hypothetical Papa platform API *would* cover — **Members / Eligibility**, **Visits / Scheduling**, **Pals / Caregivers**, and **Reporting / Outcomes** — are described here only to characterize the business. **No endpoints are published, and none have been modeled or fabricated in this catalog entry.** This repository is maintained as an honest stub.
+#### Security (2)
 
-If Papa later exposes a partner or developer API, this entry should be updated with the real base URLs, an OpenAPI document under `openapi/`, and any plans, rate limits, and FinOps details.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Tags
+- [Papa Domain Security](https://apis.io/security/papa/papa-domain-security/)
+- [Papa Trust Center](https://apis.io/security/papa/papa-trust-center/)
 
-- Healthcare
-- Social Care
-- Companion Care
-- Older Adults
-- Medicare Advantage
-- Medicaid
-- Health Plans
-- Aging
-- No Public API
+## Where to find this API
 
-## Timestamps
-
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
-
-## APIs
-
-None published. Papa exposes no public or partner developer API; see **API Access Model** above.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.papa.com)
-- [LinkedIn](https://www.linkedin.com/company/papainc)
-- [GitHub Organization](https://github.com/joinpapa)
-- [Health Plan Sign Up](https://www.papa.com/health-plans)
+- [Sign up](https://www.papa.com/health-plans)
+- [Blog](https://www.papa.com/blog)
+- [GitHub](https://github.com/joinpapa)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/papa/](https://apis.io/providers/papa/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Papa: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/papa/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
